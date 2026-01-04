@@ -191,6 +191,14 @@ figcaption {
   text-align: center;
 }
 
+.flex-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: end;
+    gap: 0;
+}
+
 /* =============================================================================
    Tables
    ============================================================================= */

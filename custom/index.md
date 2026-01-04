@@ -10,7 +10,7 @@ My interests range from [music](https://last.fm/user/auugus) to epistemology, [m
 ### Facts
 
 - I can speak Portuguese, English, Spanish, and a funny mixing of German and
-English which I call Yerman.
+English.
 - I taught myself English between the ages of 6 and 12 through YouTube commentary
 videos.
 - I'm a programmer by trade. I usually do Java, JavaScript or any language required by my employer.
