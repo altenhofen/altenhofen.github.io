@@ -100,7 +100,7 @@ def get_custom_pages() -> list[Article]:
     return pages
 
 def copy_static():
-    subprocess.run('cp -r -p {static} {outdir}/'.format(static=STATIC_DIR, outdir=OUT_DIR), shell=True)
+    subprocess.run('cp -r -p {static} {outdir}/{static}'.format(static=STATIC_DIR, outdir=OUT_DIR), shell=True)
 
 def compile_articles() -> list[Article]:
     print("Processing articles...")
@@ -125,6 +125,8 @@ def make_rss(compiled_articles: list[Article]):
     pages = sorted(pages, key=lambda x: x.date, reverse=True)
 
     for article in pages:
+        if article.slug == "index": 
+            continue
         feed.add_item(
             title=article.title,
             link=os.path.join(BLOG_URL, ARTICLE_URI, article.slug),
@@ -138,7 +140,7 @@ def make_all():
     subprocess.run('rm -rf {}'.format(OUT_DIR), shell=True)
     os.makedirs(os.path.join(OUT_DIR, ARTICLE_URI), exist_ok=True)
     copy_static()
-    compile_page('index.html', 'index.html')
+    # compile_page('index.html', 'index.html') # its a custom page now
     compile_page('404.html', '404.html')
     compile_custom_pages()
     all_articles = compile_articles()
@@ -155,8 +157,6 @@ def make_all():
         compile_page('article_tag.html', 'tags/{}/index.html'.format(tag.replace(' ', '_')),
             tag=tag, articles_with_tag=articles_with_tag)
     make_rss(articles_sorted)
-    subprocess.run('cp -r -p {static} {outdir}/{static}'.format(
-        static=STATIC_DIR, outdir=OUT_DIR), shell=True)
 
 def main():
     make_all() 
