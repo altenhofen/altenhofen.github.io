@@ -13,7 +13,7 @@ import datetime
 BLOG_URL="altenhofen.github.io"
 BLOG_NAME="Augusto Altenhofen's personal page"
 
-OUT_DIR="./compiled"
+OUT_DIR="./docs"
 ARTICLE_DIR="./articles"
 STATIC_DIR="./static"
 TEMPLATE_DIR="./templates"
