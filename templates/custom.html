@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block title %}{{article.title}}{% endblock %}
+
+{% block content %}
+<h1>{{article.title|safe}} </h1>
+<p>Last updated at {{article.date}}</p>
+<hr />
+
+{{article.content|safe}}
+{% endblock content %}

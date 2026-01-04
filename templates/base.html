@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <link rel="stylesheet" href="/static/styles.css">
+        <link rel="shortcut icon" type="image/png" href="/static/favicon.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8"/>
+        <meta name="keywords" content="{% block keywords %}Brian Lee,Brian K Lee,Brian Kihoon Lee,Software,Machine Learning,Python,Math,Programming{% endblock %}">
+        <title>{% block title %}Augusto Altenhofen{% endblock %}</title>
+        {% block scripts %} {% endblock %}
+    </head>  
+
+    <body>
+        <header>
+            <h3>Augusto Altenhofen's Website</h3>
+            <nav>
+                <ul>
+                    <li><a href="/{{ARTICLE_URI }}/index.html">Blog</a></li>
+                    <li><a href="/quotes.html">Quotes</a></li>
+                    <li><a href="/now.html">Now</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main>
+            {% block content %} {% endblock %}
+        </main>
+
+        <footer>
+            <p>back to <a href="/">index</a></p>
+        </footer>
+    </body>
+</html>

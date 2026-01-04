@@ -1,0 +1,6 @@
+{% macro tag_link_list(ARTICLE_URI, tags) -%}
+{% for tag in tags %}<a href="/{{ARTICLE_URI}}/tags/{{tag.replace(' ', '_')}}">{{tag}}</a>{{ ", " if not loop.last }}{% else %}(None){% endfor %} {%- endmacro %}
+
+{% macro article_link(ARTICLE_URI, article) -%}
+{{article.date}}&nbsp;|&nbsp; <a href="/{{ARTICLE_URI}}/{{article.slug}}/">{{article.title | safe}}</a>
+{%- endmacro %}

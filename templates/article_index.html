@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macros %}
+
+{% block title %}
+Blog index
+{% endblock title %}
+
+{% block content %}
+<h2>Articles</h2>
+
+<ul>
+{% for article in articles_sorted %}
+    <li>{{macros.article_link(ARTICLE_URI, article)}}</li>
+{% endfor %}
+</ul>
+
+<h3>...by tag</h3>
+<p>{{macros.tag_link_list(ARTICLE_URI, tags)}}</p>
+
+{% endblock content %}

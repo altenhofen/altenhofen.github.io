@@ -1,0 +1,7 @@
+{% import 'macros.html' as macros %}
+
+<p> Originally posted {{article.date}}</p>
+<p> Tagged: {{macros.tag_link_list(ARTICLE_URI, article.tags)}}</p>
+<hr />
+
+{{article.content|safe}}

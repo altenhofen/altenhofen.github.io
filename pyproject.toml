@@ -1,0 +1,10 @@
+[project]
+name = "altenhofen-github-io"
+version = "0.1.0"
+description = "minimum viable blog"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "feedgenerator>=2.2.1",
+    "jinja2>=3.1.6",
+]

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macros %}
+
+{% block title %}Articles{% endblock %}
+
+{% block content %}
+
+<h2> Articles tagged {{tag}} </h2>
+
+<hr />
+<ul>
+{% for article in articles_with_tag %}
+    <li>{{macros.article_link(ARTICLE_URI, article)}}</li>tag
+{% endfor %}
+</ul>
+
+{% endblock content %}

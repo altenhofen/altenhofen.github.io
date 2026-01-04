@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Augusto Altenhofen</title><link href="altenhofen.github.io/blog" rel="alternate"/><id>altenhofen.github.io/blog</id><updated>2026-03-01T00:00:00Z</updated><subtitle>survival notes</subtitle><entry><title>Hello world</title><link href="altenhofen.github.io/blog/first" rel="alternate"/><published>2026-03-01T00:00:00Z</published><updated>2026-03-01T00:00:00Z</updated><id>tag:None,2026-03-01:altenhofen.github.io/blog/first</id><summary type="html">
+
+&lt;p&gt; Originally posted 2026-03-01&lt;/p&gt;
+&lt;p&gt; Tagged: &lt;a href="/blog/tags/hello"&gt;hello&lt;/a&gt;, &lt;a href="/blog/tags/_boilerplate"&gt; boilerplate&lt;/a&gt;, &lt;a href="/blog/tags/_xd"&gt; xd&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;hello warudo&lt;/p&gt;
+</summary></entry></feed>
