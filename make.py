@@ -85,6 +85,19 @@ def compile_custom_pages():
             ar = get_article(os.path.join(dirpath, filename))
             compile_page('custom.html', os.path.join("{}.html".format(fn)), article=ar)
 
+# ik this is bad, but its ok. the whole code is a mess
+def get_custom_pages() -> list[Article]:
+    pages = []
+    for dirpath, _, filenames in os.walk(CUSTOM_PAGE_DIR):
+        for filename in filenames:
+            fn = os.path.splitext(filename)[0]
+            ar = get_article(os.path.join(dirpath, filename))
+            # hacky hack
+            ar = Article(slug=fn, title=ar.title,
+                 date=ar.date, content=ar.content, tags=[])
+            pages.append(ar) 
+
+    return pages
 
 def copy_static():
     subprocess.run('cp -r -p {static} {outdir}/'.format(static=STATIC_DIR, outdir=OUT_DIR), shell=True)
@@ -104,12 +117,21 @@ def make_rss(compiled_articles: list[Article]):
         title="Augusto Altenhofen",
         link=os.path.join(BLOG_URL, ARTICLE_URI),
         description="survival notes")
-    for article in compiled_articles[:10]:
+
+    pages = []
+    pages.extend(get_custom_pages())
+    pages.extend(compiled_articles[:10])
+
+    pages = sorted(pages, key=lambda x: x.date, reverse=True)
+
+    for article in pages:
         feed.add_item(
             title=article.title,
             link=os.path.join(BLOG_URL, ARTICLE_URI, article.slug),
             description=render_html('rss_item.txt', article=article),
             pubdate=article.date)
+
+
     with open(os.path.join(OUT_DIR, ARTICLE_URI, 'rss.xml'), 'w') as f:
         feed.write(f, 'utf-8')
 def make_all():
