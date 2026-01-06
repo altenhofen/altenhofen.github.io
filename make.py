@@ -110,6 +110,7 @@ def compile_articles() -> list[Article]:
             all_articles.extend(compile_article(os.path.join(dirpath, filename)))
 
     print("compiled {} articles".format(len(all_articles)))
+    all_articles = sorted(all_articles, key=lambda x: x.date, reverse=True)
     return all_articles
 
 def make_rss(compiled_articles: list[Article]):

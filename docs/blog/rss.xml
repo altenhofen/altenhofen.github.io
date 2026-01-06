@@ -1,5 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Augusto Altenhofen</title><link href="altenhofen.github.io/blog" rel="alternate"/><id>altenhofen.github.io/blog</id><updated>2026-03-01T00:00:00Z</updated><subtitle>survival notes</subtitle><entry><title>Now</title><link href="altenhofen.github.io/blog/now" rel="alternate"/><published>2026-03-01T00:00:00Z</published><updated>2026-03-01T00:00:00Z</updated><id>tag:None,2026-03-01:altenhofen.github.io/blog/now</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Augusto Altenhofen</title><link href="altenhofen.github.io/blog" rel="alternate"/><id>altenhofen.github.io/blog</id><updated>2026-05-01T00:00:00Z</updated><subtitle>survival notes</subtitle><entry><title>Why you should pick open-source tools as a developer</title><link href="altenhofen.github.io/blog/setup" rel="alternate"/><published>2026-05-01T00:00:00Z</published><updated>2026-05-01T00:00:00Z</updated><id>tag:None,2026-05-01:altenhofen.github.io/blog/setup</id><summary type="html">
+
+&lt;p&gt; Originally posted 2026-05-01&lt;/p&gt;
+&lt;p&gt; Tagged: &lt;a href="/blog/tags/linux"&gt;linux&lt;/a&gt;, &lt;a href="/blog/tags/setup"&gt;setup&lt;/a&gt;, &lt;a href="/blog/tags/workstation"&gt;workstation&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h3 id="programming-a-craft"&gt;Programming, a craft&lt;/h3&gt;
+&lt;p&gt;I’ve used several closed-source, proprietary tools for a long time as
+a developer, but all of them left a bad taste in my mouth.&lt;/p&gt;
+&lt;p&gt;First, I have to talk good things about proprietary software I’ve
+used.&lt;/p&gt;
+&lt;p&gt;I’ve never encountered a problem on Windows that wouldn’t be solved
+by a clean reinstall of the software, sure that meant messing around
+with &lt;em&gt;Regedit&lt;/em&gt; and maybe hidden folders on &lt;em&gt;C:\Windows&lt;/em&gt;,
+but it was never a HUGE problem, like the ones you find when debugging
+Pulseaudio on Linux, for example.&lt;/p&gt;
+&lt;p&gt;I’ve never had bad UI/UX experiences with VSCode*. Or with the
+JetBrains Debugger. The good part about proprietary software is that its
+usability is generally more smooth for the base-case than open
+source.&lt;/p&gt;
+&lt;p&gt;Open-source, in my experience, can generally have ‘idiotic’ things.
+Such as Linux’s major GUI not having thumbnails for the file picker
+browser for over 20-something years.&lt;/p&gt;
+&lt;p&gt;For long, I thought that the use of proprietary tools as a programmer
+made more sense since they were made by professionals, and open source
+for me was the eternal archetype of &lt;strong&gt;Richard Stallman playing
+Super Tux Kart&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I also would think that the same way that miners don’t (necessarily)
+have the know-how to make a pickaxe, the programmer shouldn’t really
+care about how and his tools are made, or care about the tools at
+all.&lt;/p&gt;
+&lt;p&gt;In the next sections, I’ll draft a general idea on why you should
+consider caring about your tools.&lt;/p&gt;
+&lt;h3 id="the-mindset-shift"&gt;The mindset shift&lt;/h3&gt;
+&lt;p&gt;First thing is, a pickaxe isn’t vendor locked. Also, the manufacturer
+can’t really FORCE YOU NOT TO use a pickaxe by just removing some files
+on a server.&lt;/p&gt;
+&lt;h4 id="visual-studio-for-mac"&gt;Visual Studio For Mac&lt;/h4&gt;
+&lt;p&gt;Visual Studio for Mac suffered this fate. I’ve never used it, but its
+a clear case of how companies can just press Shift+Del on a piece of
+locked-in software. Nowadays, you can download the, already pretty
+disgusting, web-installer, but all the files that were downloaded by the
+installer were deleted by Microsoft.&lt;/p&gt;
+&lt;p&gt;All the people who relied on Microsoft’s software were now forced to
+migrate to closed-source Rider (for C#) or other alternatives such as
+VSCode.&lt;/p&gt;
+&lt;h4 id="windows-11"&gt;Windows 11&lt;/h4&gt;
+&lt;p&gt;Windows 11 broke the ‘Metro UI’ that was used by Microsoft since
+Windows 8, which for some was a scandal. What if Microsoft just
+arbitrarily changed the “disable mouse acceleration” button? What if
+they forced an AI tool into it?&lt;/p&gt;
+&lt;p&gt;I’ve never seen this huge philosophy difference between open and
+closed-source software, for me it was just a matter of public
+development, licenses and so on.&lt;/p&gt;
+&lt;p&gt;This is what made my mind shift: the free and open-source can live
+forever.&lt;/p&gt;
+&lt;h3 id="built-to-last"&gt;Built to last&lt;/h3&gt;
+&lt;p&gt;Linus Torvalds uses the same version of uEmacs that he used in the
+1990s. As long as you have the source code and the ability to tweak some
+of the build process or dependencies, you can use the software basically
+forever.&lt;/p&gt;
+&lt;p&gt;Not the company, nor the guy who wrote it, neither the ones who host
+the source-code will lock you out of it. If I want to use, for some
+reason, my neovim 0.10.0 on a very old Linux, or 20 years in the future,
+why couldn’t I? I have the source code, and programming skills, that’s
+enough.&lt;/p&gt;
+&lt;p&gt;That’s the beauty of open source, people are still building Firefox
+for Windows 7 even though Mozilla has stopped the development, some
+people still patch Rust, Firefox, Chromium to work on out-of-date
+operating systems.&lt;/p&gt;
+&lt;p&gt;The idea of using the same GUI &lt;strong&gt;forever&lt;/strong&gt; is pretty
+common on Linux.&lt;/p&gt;
+&lt;p&gt;If for some reason you liked &lt;code&gt;wmii&lt;/code&gt;, you can just download
+the source code, and possibly make some fixes for it to compile and
+voilá. Or even better, someone could’ve already done it, and you can
+just download the fork, or the PKGBUILD, whatever.&lt;/p&gt;
+&lt;h3 id="key-takeaways"&gt;Key takeaways&lt;/h3&gt;
+&lt;p&gt;Tmux will last forever. Neovim will not get a random AI chat thingy
+when I next open it. i3 will always create a new window on
+Super+Return.&lt;/p&gt;
+&lt;p&gt;Also, if you want a more utilitarian argument:&lt;/p&gt;
+&lt;p&gt;using the same portable open-source tools builds consistency, muscle
+memory and it’s boring enough so you can focus on your work.&lt;/p&gt;
+&lt;p&gt;I should be able to install my tools on possibly every operating
+system with UNIX utilities and a C compiler.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;1. VSCode as in the software released by Microsoft is
+proprietary. You cannot reproduce the builds you download.&lt;/em&gt;&lt;/p&gt;
+</summary></entry><entry><title>Now</title><link href="altenhofen.github.io/blog/now" rel="alternate"/><published>2026-03-01T00:00:00Z</published><updated>2026-03-01T00:00:00Z</updated><id>tag:None,2026-03-01:altenhofen.github.io/blog/now</id><summary type="html">
 
 &lt;p&gt; Originally posted 2026-03-01&lt;/p&gt;
 &lt;p&gt; Tagged: (None)&lt;/p&gt;
