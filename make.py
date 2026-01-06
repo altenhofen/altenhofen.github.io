@@ -152,10 +152,10 @@ def make_all():
             if "_" in tag:
                 print("WARNING: tag {} in {} should use a space, not underscore".format(tag, article.title))
             articles_by_tag[tag].append(article)
-    compile_page('article_index.html', '{}/index.html'.format(ARTICLE_URI),
+        compile_page('article_index.html', '{}/index.html'.format(ARTICLE_URI),
         articles_sorted=articles_sorted, tags=articles_by_tag)
     for tag, articles_with_tag in articles_by_tag.items():
-        compile_page('article_tag.html', 'tags/{}/index.html'.format(tag.replace(' ', '_')),
+        compile_page('article_tag.html', '{}/tags/{}/index.html'.format(ARTICLE_URI, tag.replace(' ', '_')),
             tag=tag, articles_with_tag=articles_with_tag)
     make_rss(articles_sorted)
 
